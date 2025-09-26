@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="d-flex justify-content-center align-items-center min-vh-100">
+    <div class="card shadow-lg p-5" style="max-width: 400px; width: 95%;">
+        <h2 class="text-info mb-3 text-center">Register</h2>
+        <form method="post" action="/register" class="text-start">
+            <div class="mb-3">
+                <label class="form-label">Username:</label>
+                <input type="text" name="username" class="form-control rounded" placeholder="Enter username" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Email:</label>
+                <input type="email" name="email" class="form-control rounded" placeholder="Enter email" required>
+            </div>
+            <div class="mb-4">
+                <label class="form-label">Password:</label>
+                <input type="password" name="password" class="form-control rounded" placeholder="Enter password" required>
+            </div>
+            <div class="d-flex justify-content-center gap-2">
+                <button type="submit" class="btn btn-info btn-lg">Register</button>
+                <a href="/login" class="btn btn-warning btn-lg">Login</a>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="text-center">
+    <h2 class="text-info mb-4">Welcome, {{ username }}!</h2>
+    <div class="d-flex justify-content-center gap-3 flex-wrap">
+        <a href="/upload" class="btn btn-lg btn-info px-5 py-3">Upload Dataset</a>
+        <a href="/train" class="btn btn-lg btn-warning px-5 py-3">Train Model</a>
+        <a href="/predict" class="btn btn-lg btn-success px-5 py-3">Predict</a>
+        <a href="/visualize" class="btn btn-lg btn-primary px-5 py-3">Visualize</a>
+        <form action="/logout" method="post">
+            <button type="submit" class="btn btn-lg btn-danger px-5 py-3">Logout</button>
+        </form>
+    </div>
+</div>
+{% endblock %}
